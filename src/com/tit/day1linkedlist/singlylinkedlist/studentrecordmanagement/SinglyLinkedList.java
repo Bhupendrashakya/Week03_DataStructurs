@@ -3,7 +3,7 @@ package com.tit.day1linkedlist.singlylinkedlist.studentrecordmanagement;
 import java.util.Scanner;
 
 public class SinglyLinkedList {
-    class Node{
+   static class Node{
         String name;
         String roll;
         int age;
@@ -19,7 +19,7 @@ public class SinglyLinkedList {
         }
     }
 
-    Node Head;
+   static Node Head;
     Scanner sc=new Scanner(System.in);
     public void addStudentAtLast(String name, String roll,int age, char grade){
         Node newNode=new Node(name,roll,age,grade);
@@ -101,6 +101,7 @@ public class SinglyLinkedList {
             }else{
                 System.out.println("No match found in record !");
             }
+            temp=temp.next;
         }
     }
     public void displayAllRecords(){
